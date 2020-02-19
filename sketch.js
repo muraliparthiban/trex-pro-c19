@@ -74,7 +74,7 @@ function draw() {
   if(keyDown("space")) {
     trex.velocityY = -10;
     //jumpSound.play();
-     // jumpSound.play();
+     jump.play();
   }
   
   trex.velocityY = trex.velocityY + 0.8
@@ -87,6 +87,7 @@ function draw() {
   spawnClouds();
   spawnObstacles();
   if(obstaclesGroup.isTouching(trex)){
+    die.play();
   gameState=END;
   }
   }
