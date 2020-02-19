@@ -73,6 +73,7 @@ function draw() {
      score = score + Math.round(getFrameRate()/60); 
   if(keyDown("space")) {
     trex.velocityY = -10;
+    jumpsound.play();
   }
   
   trex.velocityY = trex.velocityY + 0.8
